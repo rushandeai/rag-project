@@ -40,22 +40,6 @@ BASH
 └── data/
 
    └── knowledge_base.md  ← 知识库文档
-
-
-├── ingest.py       ← 文档入库（切块 → 向量化 → 存储）
-
-├── rag.py          ← RAG 查询（检索 → 生成）
-
-├── app.py          ← FastAPI REST 接口
-
-├── ui.py           ← Streamlit 聊天界面
-
-├── embedding.py    ← 自定义嵌入函数
-
-└── data/
-
-   └── knowledge_base.md  ← 知识库文档
-
 License 
 
 MIT
