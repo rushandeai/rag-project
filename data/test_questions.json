@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Transformer架构的核心创新是什么？",
+    "ground_truth": "Transformer的核心创新是自注意力机制，它抛弃了传统的RNN/CNN结构，完全基于注意力来处理序列数据。自注意力允许模型同时关注序列中所有位置，捕捉长距离依赖，并且可以并行计算，训练速度远超RNN。"
+  },
+  {
+    "question": "自注意力机制中的Q、K、V分别是什么？",
+    "ground_truth": "Q（Query）、K（Key）、V（Value）是自注意力机制中的三个矩阵。每个输入词通过三个不同的权重矩阵映射得到Q、K、V。注意力计算公式为 softmax(QK^T/√d_k) * V。多头注意力将Q、K、V分成多个子空间并行计算。"
+  },
+  {
+    "question": "RAG是什么？它解决了什么问题？",
+    "ground_truth": "RAG（检索增强生成）是一种结合检索和生成的技术方案。先在外部知识库中检索相关内容，再把检索到的内容作为上下文提供给LLM生成答案。RAG解决了LLM的两个核心问题：幻觉（Hallucination）和知识更新的时效性问题。"
+  },
+  {
+    "question": "RAG的关键步骤有哪些？",
+    "ground_truth": "RAG的关键步骤包括：1.文档切分（Chunking）2.向量化（Embedding）3.向量存储 4.检索（Retrieval）5.重排序（Reranking）6.生成（Generation）。"
+  },
+  {
+    "question": "Fine-tuning和RAG的区别是什么？各自适合什么场景？",
+    "ground_truth": "Fine-tuning适合让模型学习新的格式、风格或领域知识。RAG适合引入实时更新的外部知识。两者在实际产品中经常结合使用：用Fine-tuning让模型学会特定领域的表达方式，用RAG引入最新的事实数据。"
+  },
+  {
+    "question": "什么是Embedding模型？中文有哪些主流选择？",
+    "ground_truth": "Embedding模型将文本映射为固定维度的向量，语义相似的文本在向量空间中距离更近。主流中文Embedding模型包括BGE系列（BAAI）、M3E系列、text2vec系列。BGE在C-MTEB中文基准测试中排名前列。"
+  },
+  {
+    "question": "什么是大语言模型？预训练和微调分别是什么？",
+    "ground_truth": "大语言模型是基于Transformer的深度学习模型，参数量通常在数十亿到数千亿级别。预训练使用海量文本数据无监督学习，目标是预测下一个词。微调使用标注数据进一步训练，使模型适配特定任务。"
+  },
+  {
+    "question": "向量数据库是做什么的？有哪些常用选择？",
+    "ground_truth": "向量数据库专门存储和检索高维向量，核心功能是近似最近邻搜索（ANN）。常用向量数据库包括ChromaDB（轻量级，适合原型）、Milvus（分布式，适合生产）、FAISS（Meta开源的向量检索库）和Qdrant（高性能Rust实现）。"
+  }
+]
